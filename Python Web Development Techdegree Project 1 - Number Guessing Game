@@ -23,8 +23,8 @@ def start_game():
         try:
             guessedNumber = int(input("what number are you going to choose? Choose a number:"))
         except ValueError:
-        print("""Hey I don't think that's even a number. \nGo ahead and enter the number of rows again,\nbut make sure it's like a actual number this time:\n\n""")
-        continue
+            print("""Hey I don't think that's even a number. \nGo ahead and enter the number of rows again,\nbut make sure it's like a actual number this time:\n\n""")
+            continue
 
         attemptsAtGuessing += 1
         
