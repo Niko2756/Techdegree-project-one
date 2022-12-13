@@ -20,8 +20,14 @@ def start_game():
     attemptsAtGuessing = 0
 
     while (True):
+        try:
+            guessedNumber = int(input("what number are you going to choose? Choose a number:"))
+        except ValueError:
+        print("""Hey I don't think that's even a number. \nGo ahead and enter the number of rows again,\nbut make sure it's like a actual number this time:\n\n""")
+        continue
+
         attemptsAtGuessing += 1
-        guessedNumber = int(input("what number are you going to choose? Choose a number:"))
+        
         if (randomNumber == guessedNumber):
             print("you Got It")
             print("It took you this many attempts",attemptsAtGuessing,".")
